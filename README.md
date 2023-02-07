@@ -37,5 +37,5 @@ In a command terminal, navigate to this cloned repo.
 3. Type ```git push```
 
 
-For more basic GitHub commands and workflow learnings, visit [this link here.]([https://link-url-here.org](https://docs.github.com/en/get-started/using-git/about-git))
+For more basic GitHub commands and workflow learnings, visit [this link here.](https://docs.github.com/en/get-started/using-git/about-git)
 
