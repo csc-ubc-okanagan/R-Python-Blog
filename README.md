@@ -1,5 +1,6 @@
 # R & Python Blog
 
+
 ## Documentation 
 
 To clone this repo to your local machine:
@@ -11,6 +12,7 @@ On the repo homepage, there is a green button that says ```code```. Click this, 
 In your command terminal type:
 
 ```git clone URL```
+
 
 Note: (Windows) 
 
