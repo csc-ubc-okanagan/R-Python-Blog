@@ -1,6 +1,6 @@
 ---
 title: Making colorblind-friendly figures
-date: '`r Sys.Date()`'
+date: '2023-02-11'
 categories: [data viz, ggplot]
 tags: [R, data visualization, ggplot, colorblind] # tags always lowercase
 author: Stefano Mezzini

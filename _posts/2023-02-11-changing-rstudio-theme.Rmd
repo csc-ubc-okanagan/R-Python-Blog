@@ -1,6 +1,6 @@
 ---
 title: Changing the RStudio theme
-date: '`r Sys.Date()`'
+date: '2023-02-11'
 categories: [RStudio]
 tags: [R, RStudio, customization] # tags always lowercase
 author: stefano
