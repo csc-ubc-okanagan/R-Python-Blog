@@ -1,3 +1,11 @@
+---
+title: Intro to Python
+date: '2023-02-11 11:00:00 -0800'
+tags: [python]
+author: Madison Greenough
+---
+# Introduction to Python
+
 ## Python can be used as a calculator
 
     1 + 1
