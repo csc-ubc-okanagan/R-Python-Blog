@@ -1,0 +1,19 @@
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+
+&ndash;&ndash;&ndash;  
+title: Test page  
+date: '2023-02-11 11:00:00 -0800'  
+tags: [r, figures, ggplot, colorblind]  
+author: Mathew Vis-Dunbar  
+&ndash;&ndash;&ndash;
+
+
+Some markdown content. And some R content.
+
+```{r}
+(x = 4)
+```
