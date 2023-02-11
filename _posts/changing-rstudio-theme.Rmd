@@ -3,7 +3,7 @@ title: Changing the RStudio theme
 date: '`r Sys.Date()`'
 categories: [RStudio]
 tags: [R, RStudio, customization] # tags always lowercase
-author: Stefano Mezzini
+author: stefano
 ---
 
 ```{r setup, include=FALSE}
