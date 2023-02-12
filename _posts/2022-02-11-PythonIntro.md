@@ -2,7 +2,7 @@
 title: Intro to Python
 date: '2023-02-11 11:00:00 -0800'
 tags: [python]
-author: Madison Greenough
+author: madison
 ---
 # Introduction to Python
 
