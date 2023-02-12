@@ -1,5 +1,6 @@
 # R & Python Blog
 
+Click [here](https://csc-ubc-okanagan.github.io/R-Python-Blog/) to go to the blog.
 
 ## Documentation 
 
@@ -8,11 +9,16 @@
 
 ## Basic GitHub Actions
 
-### To clone this repo to your local machine:
+### To clone this repo to your local machine using GitHub Desktop (Windows or MacOS):
+
+If needed, start by installing [GitHub Desktop](https://desktop.github.com/) on your machine. Then click on the green button on the [repo homepage](https://github.com/csc-ubc-okanagan/R-Python-Blog)] and select `Open with GitHub Desktop`. The repo will now be copied to your machine, and you can manage it easily within GitHub Desktop.
+
+
+### To clone this repo to your local machine using a terminal:
 
 Open a command terminal and navigate to the folder you would like to store this folder in.
 
-On the repo homepage, there is a green button that says ```code```. Click this, and then copy the repo URL here.
+On the [repo homepage](https://github.com/csc-ubc-okanagan/R-Python-Blog)], there is a green button that says ```code```. Click this, and then copy the repo URL here.
 
 In your command terminal type:
 
