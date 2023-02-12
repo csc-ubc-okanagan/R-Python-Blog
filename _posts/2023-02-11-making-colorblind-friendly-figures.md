@@ -39,7 +39,7 @@ p <-
 p
 ```
 
-![](/_src/2023-02-11-making-colorblind-friendly-figures_files/figure-html/unnamed-chunk-1-1.png)<!-- -->
+![](/figures/2023-02-11-making-colorblind-friendly-figures_files/figure-html/unnamed-chunk-1-1.png)<!-- -->
 
 Additionally, they are not colorblind-friendly:
 
@@ -48,7 +48,7 @@ Additionally, they are not colorblind-friendly:
 cvd_grid(p)
 ```
 
-![](/_src/2023-02-11-making-colorblind-friendly-figures_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
+![](/figures/2023-02-11-making-colorblind-friendly-figures_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
 
 While `ggplot2` offers additional color palettes with more contrast, many of them are still not colorblind-friendly:
 
@@ -57,13 +57,13 @@ While `ggplot2` offers additional color palettes with more contrast, many of the
 p + scale_color_brewer(type = 'qual', palette = 6)
 ```
 
-![](/_src/2023-02-11-making-colorblind-friendly-figures_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
+![](/figures/2023-02-11-making-colorblind-friendly-figures_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
 
 ```r
 cvd_grid(p + scale_color_brewer(type = 'qual', palette = 6))
 ```
 
-![](/_src/2023-02-11-making-colorblind-friendly-figures_files/figure-html/unnamed-chunk-3-2.png)<!-- -->
+![](/figures/2023-02-11-making-colorblind-friendly-figures_files/figure-html/unnamed-chunk-3-2.png)<!-- -->
 
 And while the `viridis` palette (from the `viridisLite` package and included in the `ggplot2` package) can be a good option for continuous palettes, it can still be hard to distinguish between colors in qualitative palettes:
 
@@ -72,13 +72,13 @@ And while the `viridis` palette (from the `viridisLite` package and included in 
 p + scale_color_viridis_d()
 ```
 
-![](/_src/2023-02-11-making-colorblind-friendly-figures_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+![](/figures/2023-02-11-making-colorblind-friendly-figures_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
 
 ```r
 cvd_grid(p + scale_color_viridis_d())
 ```
 
-![](/_src/2023-02-11-making-colorblind-friendly-figures_files/figure-html/unnamed-chunk-4-2.png)<!-- -->
+![](/figures/2023-02-11-making-colorblind-friendly-figures_files/figure-html/unnamed-chunk-4-2.png)<!-- -->
 
 The `khroma` package provides multiple high-contrast, colorblind-friendly palettes for qualitative, diverging and sequential data, based on the work of Paul Tol (https://personal.sron.nl/~pault/) and Fabio Crameri (https://www.fabiocrameri.ch/).
 
@@ -87,13 +87,13 @@ The `khroma` package provides multiple high-contrast, colorblind-friendly palett
 p + khroma::scale_color_bright()
 ```
 
-![](/_src/2023-02-11-making-colorblind-friendly-figures_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
+![](/figures/2023-02-11-making-colorblind-friendly-figures_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
 
 ```r
 cvd_grid(p + scale_color_bright())
 ```
 
-![](/_src/2023-02-11-making-colorblind-friendly-figures_files/figure-html/unnamed-chunk-5-2.png)<!-- -->
+![](/figures/2023-02-11-making-colorblind-friendly-figures_files/figure-html/unnamed-chunk-5-2.png)<!-- -->
 
 However, it is best to also use different shapes (in addition to different colors), when possible, to ensure people are able to distinguish between each legend item (which can be difficult with many colors -- compare colors for 3 and 8 for deutan and protan versions, as well as the desaturated version). We can do this by specifying the `shape` argument. Note that we also need to change the name of the shape legend to ensure we get a single legend:
 
@@ -107,13 +107,13 @@ p_sh <-
 p_sh
 ```
 
-![](/_src/2023-02-11-making-colorblind-friendly-figures_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
+![](/figures/2023-02-11-making-colorblind-friendly-figures_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
 
 ```r
 cvd_grid(p_sh)
 ```
 
-![](/_src/2023-02-11-making-colorblind-friendly-figures_files/figure-html/unnamed-chunk-6-2.png)<!-- -->
+![](/figures/2023-02-11-making-colorblind-friendly-figures_files/figure-html/unnamed-chunk-6-2.png)<!-- -->
 
 ### Continuous vs discrete `khroma` color palettes
 
