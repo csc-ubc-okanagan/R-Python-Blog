@@ -22,8 +22,10 @@ The default color palettes `ggplot2` provides are generally good enough for a qu
 library('ggplot2')     # for fancy figures
 library('khroma')      # for fancy palettes
 library('cowplot')     # for fancy multi-panel figures
+library('colorspace')  # required by colorblindr
 library('colorblindr') # to simulate colorblind vision
-theme_set(theme_bw())
+
+theme_set(theme_bw()) # change default ggplot theme
 
 p <-
   ggplot(mtcars, aes(disp, mpg, color = factor(carb))) +
