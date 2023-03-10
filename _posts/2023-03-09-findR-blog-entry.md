@@ -12,8 +12,6 @@ output:
 
 <!-- https://chirpy.cotes.page/posts/write-a-new-post/ -->
 
-
-
 It is good practice to have descriptive but concise file names so one can easily find the code they are looking for. But as projects grow, the number of scripts can become quite large (unless you are one of those chaotic people that put everything in a single script...). With UNIX computers, one can easily search for code in the a file explorer window, but this does not work with Windows. It is possible to search for files by name, but it is not possible to search for specific content in `R` scripts.
 
 The `findR` package allows Windows users to search for specific strings of code within directories using a simple syntax:
@@ -33,37 +31,13 @@ The `pattern` argument can be any code string, but note that single and double q
 
 ```r
 findRscript('library(\'ctmm\')', path = 'H:/GitHub/env-var-review/analysis')
-```
-
-```
 ## Number of R scripts scanned: 5
-```
-
-```
 ## Number of R scripts with matching content: 0
-```
-
-```
 ## Total number of matches: 0
-```
-
-```r
 findRscript('library\\(\'ctmm\'\\)', path = 'H:/GitHub/env-var-review/analysis')
-```
-
-```
 ## Number of R scripts scanned: 5
-```
-
-```
 ## Number of R scripts with matching content: 3
-```
-
-```
 ## Total number of matches: 3
-```
-
-```
 ##                                                          path_to_file line
 ## 1     H:/GitHub/env-var-review/analysis/figures/delta-t-sensitivity.R    2
 ## 2 H:/GitHub/env-var-review/analysis/hr-simulation-extreme-scenarios.R    1
