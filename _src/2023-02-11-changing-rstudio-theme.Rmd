@@ -1,7 +1,7 @@
 ---
 title: Changing the RStudio theme
 date: '2023-02-11 09:00:00 -0800'
-categories: [RStudio]
+categories: [R, RStudio]
 tags: [r, rstudio] # tags always lowercase
 author: stefano
 output:

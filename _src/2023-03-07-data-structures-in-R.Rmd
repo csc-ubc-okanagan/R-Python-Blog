@@ -1,7 +1,7 @@
 ---
 title: Making colorblind-friendly figures
 date: '2023-03-07 11:00:00 -0800'
-categories: [r, data]
+categories: [R, wrangling]
 tags: [r, data-structures, wrangling] # tags always lowercase
 author: stefano
 math: true # to enable math (not on by default)

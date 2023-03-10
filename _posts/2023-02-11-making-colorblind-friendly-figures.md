@@ -1,7 +1,7 @@
 ---
 title: Making colorblind-friendly figures
 date: '2023-02-11 10:00:00 -0800'
-categories: [figures, ggplot]
+categories: [R, ggplot]
 tags: [r, figures, ggplot, colorblind] # tags always lowercase
 author: stefano
 math: false # to enable math (not on by default)
