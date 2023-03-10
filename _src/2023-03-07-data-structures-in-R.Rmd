@@ -1,0 +1,67 @@
+---
+title: Making colorblind-friendly figures
+date: '2023-03-07 11:00:00 -0800'
+categories: [r, data]
+tags: [r, data-structures, wrangling] # tags always lowercase
+author: stefano
+math: true # to enable math (not on by default)
+output:
+  html_document:
+    keep_md: TRUE
+---
+
+\usepackage{amsmath}
+
+There are many different data structure types in `R`, each with varying levels of complexity and uses. The simplest data structure in `R` is a vector. Vectors are one-dimensional arrays (i.e., sets of values) of a single class (such as characters, numbers, dates, etc.), and they have a similar structure to the mathematical concept of vectors. For example, the vector $\vec v$ with values 1, 4, 6, 2 would be:
+
+$$\vec v = \begin{bmatrix}1 \\ 4 \\ 6 \\ 2\end{bmatrix}.$$
+
+In `R` we can create vectors using the `c()` function, as follows:
+
+```{r}
+v <- c(1, 4, 6, 2)
+v
+```
+
+(`R` prints vectors in a line rather than as columns to improve readability.)
+
+Since vectors can only contain elements of a common type, `c()` will force all elements to be of a single class. In the example below, I create a vector with the number 1, the letter "a", today's date, and the value `TRUE` (a boolean value), but `c()` coerces all values to be characters:
+
+```{r}
+c(1, 'a', Sys.Date(), TRUE)
+```
+
+If we place two vectors (of the same class) side by side, we can create a matrix. Matrices are thus two-dimensional arrays 
+
+
+```{r}
+# 2D arrays: matrices
+matrix(data = 1:8, nrow = 2)
+matrix(data = 1:8, ncol = 2)
+matrix(data = 1:8, ncol = 2, byrow = TRUE)
+
+# matrix operations
+matrix(1:9, ncol = 3)
+matrix(1:9, ncol = 3) + 3
+matrix(1:9, ncol = 3) * 2 # NOT matrix multiplication
+matrix(1:9, ncol = 3) %*% 6:8 # matrix multiplication
+matrix(1:9, ncol = 3) %*% matrix(1:6, ncol = 2)
+
+# grouping objects with different and types: lists
+l <- list(letters = c('a', 'b', 'c'),
+          numbers = 1:10,
+          today = Sys.Date())
+l
+l$letters
+l$today
+
+# lists with a table-like structure: data frames
+#' note: `data.frame()` recycles elements if the longest vector is a multiple
+data.frame(numbers = 1:10,
+           letters = c('a', 'b', 'c'),
+           today = Sys.Date())
+
+data.frame(numbers = 1:10,
+           letters = c('a', 'b'),
+           today = Sys.Date())
+```
