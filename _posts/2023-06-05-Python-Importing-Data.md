@@ -4,7 +4,7 @@ output:
     keep_md: TRUE
 title: Reading Data in Python
 date: ‘2023-06-05 11:00:00 -0800’
-tags: [Python]
+tags: [python]
 author: madison
 ---
 
