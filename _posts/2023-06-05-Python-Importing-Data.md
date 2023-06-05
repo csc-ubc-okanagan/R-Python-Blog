@@ -46,7 +46,7 @@ Alternatively, you can also iterate through each row similar to the csv format m
 
 ## URL
 
-You can also access data on the internet without having to save a local copy. Take this website for example: (Gapminder Data)[https://raw.githubusercontent.com/jstaf/gapminder/master/gapminder/gapminder.csv]
+You can also access data on the internet without having to save a local copy. Take this website for example: [Gapminder Data](https://raw.githubusercontent.com/jstaf/gapminder/master/gapminder/gapminder.csv)
 
 If you follow the link, you will see that it is simply a CSV file with no other formatting or permissions to enter. If we wanted to read this into our Python script, we could do it like this:
 
