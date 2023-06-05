@@ -3,7 +3,7 @@ output:
   html_document:
     keep_md: TRUE
 title: Reading Data in Python
-date: ‘2022-02-11 11:00:00 -0800’
+date: ‘2023-06-05 11:00:00 -0800’
 tags: [Python]
 author: madison
 ---
