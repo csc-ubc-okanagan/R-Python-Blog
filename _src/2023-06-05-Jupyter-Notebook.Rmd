@@ -4,7 +4,7 @@ output:
     keep_md: TRUE
 title: Jupyter Notebook
 date: ‘2023-06-05 11:00:00 -0800’
-tags: [python]
+tags: [python, jupyter]
 author: madison
 ---
 
