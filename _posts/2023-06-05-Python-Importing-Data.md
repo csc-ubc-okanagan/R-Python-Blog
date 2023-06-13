@@ -14,7 +14,7 @@ author: madison
 
 Using the Pandas library, it is very easy to open a CSV file using Python. Simply import the package, and then use the line `pd.read_csv()`. See this example below:
 
-```{python}
+```python
 import pandas as pd
 df = pd.read_csv("file.csv")
 ```
