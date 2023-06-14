@@ -19,7 +19,7 @@ timezone: America/Vancouver
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: R and Python help blog # the main title
+title: R & Python Blog # the main title
 
 tagline: Brought to you by UBCO's Center for Scholarly Communication. # it will display as the sub-title
 
