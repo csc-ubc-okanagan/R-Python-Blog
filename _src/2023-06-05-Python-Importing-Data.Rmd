@@ -1,13 +1,16 @@
 ---
+
+title: Reading Data in Python
+date: ‘2023-06-05 11:00:00 -0800’
+categories: [Python, Data]
+tags: [python, data]
+author: madison
 output:
   html_document:
     keep_md: TRUE
-title: Reading Data in Python
-date: ‘2023-06-05 11:00:00 -0800’
-tags: [python, data]
-author: madison
 ---
 
+    
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
@@ -28,10 +31,10 @@ Alternatively, if you were to use base Python, it gets a bit more complicated. U
 
 ```{python}
 import csv
-with open("./file.csv", 'r') as file:
+with open("file.csv", 'r') as file:
   csvreader = csv.reader(file)
   for row in csvreader:
-    #print(row)
+    print(row)
 ```
 
 ## Text File

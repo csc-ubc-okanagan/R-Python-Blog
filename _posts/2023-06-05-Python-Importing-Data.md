@@ -1,18 +1,22 @@
 ---
+
+title: Reading Data in Python
+date: ‘2023-06-05 11:00:00 -0800’
+categories: [Python, Data]
+tags: [python, data]
+author: madison
 output:
   html_document:
     keep_md: TRUE
-title: Reading Data in Python
-date: ‘2023-06-05 11:00:00 -0800’
-tags: [python, data]
-author: madison
 ---
 
+    
 
 
 ## CSV File
 
 Using the Pandas library, it is very easy to open a CSV file using Python. Simply import the package, and then use the line `pd.read_csv()`. See this example below:
+
 
 ```python
 import pandas as pd
@@ -24,19 +28,29 @@ Note that this assumes the file you want to open follows the same filepath as yo
 
 Alternatively, if you were to use base Python, it gets a bit more complicated. Using the CSV library, it would have to be done by iterating through each row in the file. Printing each row would look like this:
 
-```{python}
+
+```python
 import csv
-with open("./file.csv", 'r') as file:
+with open("file.csv", 'r') as file:
   csvreader = csv.reader(file)
   for row in csvreader:
-    #print(row)
+    print(row)
+```
+
+```
+## ['12\t12']
+## ['34\t1']
+## ['1\t1']
+## ['1\t1']
+## ['1\t1']
 ```
 
 ## Text File
 
 Similarly, for a text file, we can use Pandas to simplify the process. We can use the line `pd.read_fwf()` to read in a `.txt` file. For reference, FWF stands for fixed width lines which allows the lengths and features of the file to be specified as fixed values so that it can be read in to Python systematically. See this example below:
 
-```{python}
+
+```python
 import pandas as pd
 df = pd.read_fwf('file.txt')
 ```
@@ -50,7 +64,8 @@ You can also access data on the internet without having to save a local copy. Ta
 
 If you follow the link, you will see that it is simply a CSV file with no other formatting or permissions to enter. If we wanted to read this into our Python script, we could do it like this:
 
-```{python}
+
+```python
 import pandas as pd
 url = 'https://raw.githubusercontent.com/jstaf/gapminder/master/gapminder/gapminder.csv'
 df = pd.read_csv(url)

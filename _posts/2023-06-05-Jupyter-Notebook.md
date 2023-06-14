@@ -1,11 +1,12 @@
 ---
+title: Jupyter Notebook
+date: ‘2023-06-05 11:00:00 -0800’
+categories: [Python, Jupyter]
+tags: [python, jupyter]
+author: madison
 output:
   html_document:
     keep_md: TRUE
-title: Jupyter Notebook
-date: ‘2023-06-05 11:00:00 -0800’
-tags: [python, jupyter]
-author: madison
 ---
 
 
