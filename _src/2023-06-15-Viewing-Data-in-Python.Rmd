@@ -1,0 +1,109 @@
+---
+title: Viewing Data in Python
+date: '2023-06-15 09:00:00 -0800'
+categories: [Python, Data]
+tags: [python] # tags always lowercase
+author: madison
+output:
+  html_document:
+    keep_md: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+The Pandas package is the go-to package in Python for data frames and data set analysis.
+
+Let's load in a dataset from a URL and then explore the data. We can enter the URL to the data set and save it as a variable so that it is easily accessible. Since the data set is a `.csv` file, we can use the pandas function `read_csv()` to save the data into a data frame!
+
+```{python}
+import pandas as pd # we nickname it pd to save time when calling it later
+url = 'https://raw.githubusercontent.com/jstaf/gapminder/master/gapminder/gapminder.csv'
+df = pd.read_csv(url)
+```
+
+We name the data set `df` which is short for data frame. This is just a common name used for naming data, but any name could be used depending on preference.
+
+The `head()` function is often used to show the first few rows of a data frame. The default is the first five rows, but you can enter a different value inside the brackets to get the first n number of rows.
+
+```{python}
+df.head()
+```
+
+But if we only wanted to see the first 3 rows...
+```{python}
+df.head(3)
+```
+
+Remember, Python starts at 0 and not 1, so the first row of data is technically zero! Also, notice that pandas noticed that the first row of the csv file was header names, so it automatically created column titles.
+
+We can also do this for the last few rows of the data set, know as the tail.
+
+```{python}
+df.tail()
+```
+
+We can now explore the data a bit more, looking at the data types and data structures.
+
+We can use the `.info()` function to get a summary of data frame information, such as the count of null values, data types, etc. Take a look below.
+
+```{python}
+df.info()
+```
+
+We can also quickly see summary statistics using the `.describe()` function.
+
+```{python}
+df.describe()
+```
+
+If we wanted to know the number of unique values of a specific column, we could use the `value_counts()` function.
+
+```{python}
+df.country.value_counts()
+```
+
+This shows that there are 12 occurrences of each unique country value.
+
+If we wanted to know the number of countries recorded for each year, how would we find that information?
+
+We can do so like this:
+
+```{python}
+df.year.value_counts()
+```
+
+If we wanted to find specific values, let’s say the maximum values, we could use the function `.max()`.
+
+```{python}
+df.max()
+```
+
+Other similar functions include `.min()`, `.mean()`, and `.median()`.
+
+If we wanted to group by specific data, let’s say country, and then apply an aggregate function, we could do it like this:
+
+```{python}
+df.groupby('country').max()
+```
+
+We can also group by multiple columns.
+
+```{python}
+df.groupby(['country', 'year']).max()
+```
+
+If we wanted to know the number of countries in each continent recorded for each year, how would we find that information?
+
+```{python}
+df.groupby(['year']).continent.value_counts()
+```
+
+Notice that we did not change anything in our original data that we loaded in all of the code blocks above. We just simply viewed the data in different ways. If you wanted to clean the data or create a permanent copy of the grouped values, you would have to save it as a variable by typing a name on the left hand side, the equals sign, and then the action you want saved on the right hand side. For example:
+
+```{python}
+df2 = df.groupby(['year']).continent.value_counts()
+```
+
+Here we just did the same thing as earlier, but saved it to a new variable called df2.

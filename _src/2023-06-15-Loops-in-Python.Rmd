@@ -1,0 +1,71 @@
+---
+title: Loops in Python
+date: '2023-06-15 09:00:00 -0800'
+categories: [Python, Getting Started]
+tags: [python] # tags always lowercase
+author: madison
+output:
+  html_document:
+    keep_md: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Loops are a common tool used in Python to help users iterate through lists, or perform the same operation numerous times without added efforts.
+
+Let's look at a few examples:
+
+```{python}
+# Loops
+
+for n in [0, 1, 5, 2, -5]:
+    # this is inside the loop
+    print("The number is", n, "and its squared value is", n**2)
+# this is outside the loop
+```
+
+```{python}
+## Loop
+s = "Python"
+for c in s:
+    print(c + "!")
+```
+
+```{python}
+# range(10) sets values 0-9, because recall Python starts at 0, not 1
+for i in range(10):
+    print(i)
+```
+
+This is equivalent to writing:
+
+```{python}
+for i in range(0,10):
+    print(i)
+```
+
+If we wanted it to start at 1 and go to 10 (inclusive), we would write:
+
+```{python}
+for i in range(1,11):
+    print(i)
+```
+
+Other examples:
+
+```{python}
+#(start,end,increments)
+for i in range(0,101,10):
+    print(i)
+```
+
+```{python}
+n = 3
+while n > 0:
+    print(n)
+    n = n - 1
+
+print("Smile!")
+```
