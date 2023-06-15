@@ -1,7 +1,7 @@
 ---
 title: Introduction to Python
 date: '2023-02-15 09:00:00 -0800'
-categories: [Python]
+categories: [Python, Getting Started]
 tags: [python] # tags always lowercase
 author: madison
 output:
