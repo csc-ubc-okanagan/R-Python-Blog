@@ -27,7 +27,7 @@ All posts will fall into these categories, with Python and R as the primary cate
 
 ### Tagging Posts
 
-The tags will be 
+The tags will be listed in all lowercase, with the exception of `R`. Multiple tags can be listed in each blog post.
 
 ## Basic GitHub Actions
 
