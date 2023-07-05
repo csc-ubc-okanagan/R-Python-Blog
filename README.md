@@ -4,8 +4,30 @@ Click [here](https://csc-ubc-okanagan.github.io/R-Python-Blog/) to go to the blo
 
 ## Documentation 
 
+### Categorizing Posts
 
+The layout of the 'Categories' tab will follow this structure:
 
+- Python
+    - Getting Started
+    - IDE
+    - Data
+    - Visualization
+    - Modelling
+    - Advanced
+- R
+    - Getting Started
+    - IDE
+    - Data
+    - Visualization
+    - Modelling
+    - Advanced
+
+All posts will fall into these categories, with Python and R as the primary categories, with identical subcategories. 
+
+### Tagging Posts
+
+The tags will be 
 
 ## Basic GitHub Actions
 
