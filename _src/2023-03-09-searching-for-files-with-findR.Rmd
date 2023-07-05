@@ -1,8 +1,8 @@
 ---
 title: Searching for files with the `findR` package
 date: '2023-03-09 18:00:00 -0800'
-categories: [R]
-tags: [r, windows] # tags always lowercase
+categories: [R, Getting Started]
+tags: [R, windows] # tags always lowercase
 author: stefano
 math: false # to enable math (not on by default)
 output:
