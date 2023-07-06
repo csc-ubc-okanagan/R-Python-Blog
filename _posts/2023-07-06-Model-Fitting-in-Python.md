@@ -1,6 +1,6 @@
 ---
 title: Basic Model Fitting in Python
-date: '2023-06-15 09:00:00 -0800'
+date: '2023-07-06 09:00:00 -0800'
 categories: [Python, Modelling]
 tags: [python] # tags always lowercase
 author: madison
@@ -55,7 +55,7 @@ model.summary()
   <th>Date:</th>             <td>Thu, 06 Jul 2023</td> <th>  Prob (F-statistic):</th> <td>0.000672</td> 
 </tr>
 <tr>
-  <th>Time:</th>                 <td>14:40:46</td>     <th>  Log-Likelihood:    </th> <td> -33902.</td> 
+  <th>Time:</th>                 <td>15:26:19</td>     <th>  Log-Likelihood:    </th> <td> -33902.</td> 
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>  1704</td>      <th>  AIC:               </th> <td>6.781e+04</td>
@@ -138,7 +138,7 @@ model1.summary()
   <th>Date:</th>             <td>Thu, 06 Jul 2023</td> <th>  Prob (F-statistic):</th> <td>4.87e-12</td> 
 </tr>
 <tr>
-  <th>Time:</th>                 <td>14:40:46</td>     <th>  Log-Likelihood:    </th> <td> -11192.</td> 
+  <th>Time:</th>                 <td>15:26:19</td>     <th>  Log-Likelihood:    </th> <td> -11192.</td> 
 </tr>
 <tr>
   <th>No. Observations:</th>      <td>   624</td>      <th>  AIC:               </th> <td>2.239e+04</td>
