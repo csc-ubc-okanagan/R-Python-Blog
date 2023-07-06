@@ -1,0 +1,54 @@
+---
+title: Basic Model Fitting in Python
+date: '2023-06-15 09:00:00 -0800'
+categories: [Python, Modelling]
+tags: [python] # tags always lowercase
+author: madison
+output:
+  html_document:
+    keep_md: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+In previous categories we have looked at cleaning, summarizing, and subsetting data, with some minor calculations, but we haven’t yet looked at analyzing our data.
+
+Python is a very powerful tool for data analysis. Similarly to R, we can fit linear models and view graphs. First, we will look at some basic data analysis processes in Python.
+
+Let’s re-load in our Gapminder data:
+
+```{python}
+import pandas as pd
+url = 'https://raw.githubusercontent.com/jstaf/gapminder/master/gapminder/gapminder.csv'
+df = pd.read_csv(url)
+```
+
+Let’s say we want to fit a linear model to see if there is a relationship between population and time. First, let’s do this with the entire dataset with all countries. 
+
+Note that OLS stands for ordinary least squares.
+
+```{python}
+import statsmodels.api as sm
+# define our x and y variables for clarity
+y = df['pop']
+x = df['year']
+x = sm.add_constant(x)
+model = sm.OLS(y,x).fit()
+model.summary()
+```
+
+Let’s try fitting another linear model, but using only data from Africa.
+
+```{python}
+df_AF = df[df['continent'] == 'Africa']
+df_AF.head()
+
+y = df_AF['pop']
+x = df_AF['year']
+x = sm.add_constant(x)
+model1 = sm.OLS(y,x).fit()
+model1.summary()
+```
+
