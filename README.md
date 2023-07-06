@@ -2,32 +2,7 @@
 
 Click [here](https://csc-ubc-okanagan.github.io/R-Python-Blog/) to go to the blog.
 
-## Documentation 
-
-### Categorizing Posts
-
-The layout of the 'Categories' tab will follow this structure:
-
-- Python
-    - Getting Started
-    - IDE
-    - Data
-    - Visualization
-    - Modelling
-    - Advanced
-- R
-    - Getting Started
-    - IDE
-    - Data
-    - Visualization
-    - Modelling
-    - Advanced
-
-All posts will fall into these categories, with Python and R as the primary categories, with identical subcategories. 
-
-### Tagging Posts
-
-The tags will be listed in all lowercase, with the exception of `R`. Multiple tags can be listed in each blog post.
+# Using GitHub
 
 ## Basic GitHub Actions
 
@@ -69,8 +44,9 @@ In a command terminal, navigate to this cloned repo.
 2. Type ```git commit -m "MESSAGE"```
 3. Type ```git push```
 
-
 For more basic GitHub commands and workflow learnings, visit [this link here.](https://docs.github.com/en/get-started/using-git/about-git)
+
+# Using the Repo to Update the Blog
 
 ## Writing A Post
 
@@ -94,3 +70,28 @@ output:
 4. Once the post is completed, knit the file. In the same `_src` file, an `HTML` and `MD` file will be created. Delete the `HTML` file, and then move the `MD` file into the `_posts` folder.
 
 Once this is done, commit the changes to the repo and the new blog version should be deployed.
+
+## Categorizing Posts
+
+The layout of the 'Categories' tab will follow this structure:
+
+- Python
+    - Getting Started
+    - IDE
+    - Data
+    - Visualization
+    - Modelling
+    - Advanced
+- R
+    - Getting Started
+    - IDE
+    - Data
+    - Visualization
+    - Modelling
+    - Advanced
+
+All posts will fall into these categories, with Python and R as the primary categories, with identical subcategories. 
+
+## Tagging Posts
+
+The tags will be listed in all lowercase, with the exception of `R`. Multiple tags can be listed in each blog post.
