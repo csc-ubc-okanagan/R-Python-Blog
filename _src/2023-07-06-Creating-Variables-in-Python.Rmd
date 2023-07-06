@@ -1,0 +1,78 @@
+---
+title: Creating Variables in Python
+date: '2023-06-20 09:00:00 -0800'
+categories: [Python, Data]
+tags: [python] # tags always lowercase
+author: madison
+output:
+  html_document:
+    keep_md: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Occasionally we need to derive variables form existing information. A good example of this is conversion between scales. If we wanted to change a measurement from metres to kilometres or weight in pounds to kilograms, we could do this simply by performing a basic operation on an entire column. In this situation, let’s start by multiplying two columns together to create a new column. Recall the GDP dataset from previous articles. Let’s say we want to know the total GDP for the country. This could be calculated by multiplying the population by the GDP_per_Cap.
+
+If you are just starting here, let’s re-load in the original Gapminder data:
+
+```{python}
+import pandas as pd
+url = 'https://raw.githubusercontent.com/jstaf/gapminder/master/gapminder/gapminder.csv'
+df = pd.read_csv(url)
+```
+
+```{python}
+df['Total_GDP'] = df['pop'] * df['gdpPercap']
+df.head()
+```
+
+Since the number is too large to actually interpret, let’s divide it by 1 billion so that the unit of measure is in billions.
+
+```{python}
+df['Total_GDP'] = df['Total_GDP'] / 1000000000
+df = df.rename({'Total_GDP': 'TotalGDP_Bil'}, axis = 1)
+df.head()
+```
+
+Note that if you were to run this multiple times, it would keep dividing by 1 billion each time, so we want to ensure it is only run once.
+
+Now, let’s say we want to create a new column that contains both the country and continent information together. This is a useful tool if you had information where a first name and last name were separated, or even there was a username and you wanted to create a new column by combining the username and an email extension. Let’s take a look at our example.
+
+```{python}
+df['Country_Cont'] = df['country'].astype(str) + '_' + df['continent']
+df.head()
+```
+
+There are so many different ways to perform an operation like this. You could use the `apply()` function, the `.agg()` function, `.map()` function, and more!
+
+As an exercise, try creating your own column using either a basic mathematical operation on an existing column, or by combining two columns, or anything else you can think of!
+
+Some examples:
+
+1. Create a new column with the first three letters of the country name
+2. Convert the total GDP column back to the GDP per cap column by multiplying by 1 billion and then dividing by the population.
+3. Combine the country name with the year.
+
+Here are the solutions to the examples provided above.
+
+```{python}
+# Solution to #1
+df['first_3_letters'] = df.country.str[:3]
+df.head()
+```
+
+```{python}
+# Solution to #2
+df['converted_gdp_per_cap'] = df['TotalGDP_Bil'] * 1000000000
+df['converted_gdp_per_cap'] = df['converted_gdp_per_cap'] / df['pop']
+df.head()
+```
+
+```{python}
+# Solution to #3
+df['Country_Year'] = df['country'].astype(str) + '_' + df['year'].astype(str)
+df.head()
+```
+
