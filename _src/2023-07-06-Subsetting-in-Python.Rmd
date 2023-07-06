@@ -1,0 +1,136 @@
+---
+title: Subsetting in Python
+date: '2023-07-07 09:00:00 -0800'
+categories: [Python, Data]
+tags: [python] # tags always lowercase
+author: madison
+output:
+  html_document:
+    keep_md: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Sometimes the data frame we are working with can be very large and take a while to process. Alternatively, we could only need a portion of the information. There is a way to filter through a data frame such that only the specified information is used, which saves space and time!
+
+Let’s re-load in our Gapminder data:
+
+```{python}
+import pandas as pd
+url = 'https://raw.githubusercontent.com/jstaf/gapminder/master/gapminder/gapminder.csv'
+df = pd.read_csv(url)
+```
+
+We know that we can select just one column like this below:
+
+```{python}
+df['country']
+```
+
+So if we wanted to create a new data frame by filtering our existing data frame for entries where the country column has the value ‘Canada’, we can do so like this:
+
+```{python}
+df_2 = df[df['country'] == 'Canada']
+df_2.head()
+```
+
+Alternatively, if we didn’t want to create a new data frame, but we wanted to view just a subset of the data frame temporarily, we could write this:
+
+```{python}
+cols = ['country', 'continent', 'pop']
+df[cols]
+```
+
+We could also perform operations such as `.mean()`, `.median()`, `.max()`, etc. using filtering. An example of this can be found below.
+
+```{python}
+cols = ['lifeExp', 'pop', 'gdpPercap']
+df[cols].mean()
+```
+
+We can select different row & column combinations as well by indexing. If we wanted to select just the first entry in the first row and column, remembering that Python starts indexing at 0, it would look like this:
+
+```{python}
+df.iloc[0,0]
+```
+
+`.iloc()` is a function that helps us select a particular cell in the data set. We can also use it to select the first row entirely.
+
+```{python}
+df.iloc[0]
+```
+
+We could also use it to select the first 3 rows like this:
+
+```{python}
+df.iloc[:3]
+```
+
+Which is equivalent to:
+
+```{python}
+df.iloc[0:3]
+```
+
+If we wanted to select the first column only:
+
+```{python}
+df.iloc[:,0]
+```
+
+And then if we wanted to select all rows but only the second and third columns, we could do so like this:
+
+```{python}
+df.iloc[:, 1:3]
+```
+
+## Logical Subsetting
+
+So far, we haven’t applied many conditions to our subsets, but we can. In logical subsetting, the subset defaults to returning the results where the condition is TRUE.
+
+Recall, Python allows us to specify several conditions:
+
+- less than >
+- greater than <
+- less than or equal to <=
+- greater than or equal >=
+- equivalent to ==
+- not equivalent to !=
+
+As well as boolean operators
+
+- or |
+- and &
+
+```{python}
+df_3 = df[df['pop'] > 10000000] # all variables for when population is greater than 10 million
+df_3.head() 
+```
+
+If we wanted to filter by country name and year, without saving to a new data frame, we can do so like this:
+
+```{python}
+df[(df['country'] == 'Canada') & (df['year'] >= 2000)]
+```
+
+Let’s say you want to know the average life expectancy in Australia for all recorded years before 2000. Try this as an exercise. To calculate this, we will first have to filter our data frame with two conditions, and then we will have to calculate the mean.
+
+Hint: We can calculate the mean for all columns at once, and then just read off the Life Expectancy value to get the answer we are looking for.
+
+There are multiple ways to solve this. See the solutions below:
+
+```{python}
+# Solution 1
+df[(df['country'] == 'Australia') & (df['year'] < 2000)].mean(numeric_only = True)
+```
+
+```{python}
+# Solution 2
+filtered_df = df[(df['country'] == 'Australia') & (df['year'] < 2000)]
+filtered_df['lifeExp'].mean()
+```
+
+There are many different ways that will lead to the same answer! Try to think of another way to do it!
+
