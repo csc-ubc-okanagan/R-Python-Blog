@@ -76,19 +76,19 @@ Once this is done, commit the changes to the repo and the new blog version shoul
 The layout of the 'Categories' tab will follow this structure:
 
 - Python
-    - Getting Started
-    - IDE
-    - Data
-    - Visualization
-    - Modelling
-    - Advanced
+    - P_Getting Started
+    - P_IDE
+    - P_Data
+    - P_Visualization
+    - P_Modelling
+    - P_Advanced
 - R
-    - Getting Started
-    - IDE
-    - Data
-    - Visualization
-    - Modelling
-    - Advanced
+    - R_Getting Started
+    - R_IDE
+    - R_Data
+    - R_Visualization
+    - R_Modelling
+    - R_Advanced
 
 All posts will fall into these categories, with Python and R as the primary categories, with identical subcategories. 
 
