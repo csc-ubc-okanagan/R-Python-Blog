@@ -10,7 +10,7 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, fig.path="_posts/images/")
+knitr::opts_chunk$set(echo = TRUE, fig.path="../_posts/images/")
 ```
 
 Matplotlib is a standard package used in Python for plotting. This is a basic plotting package, but does have limitations.
