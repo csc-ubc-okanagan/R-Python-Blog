@@ -35,14 +35,14 @@ We will take a look at a scatterplot of the first two columns in iris.
     import matplotlib.pyplot as plt
     plt.scatter(x = iris['Sepal.Length'], y = iris['Sepal.Width'])
 
-<img src="../_posts/images/unnamed-chunk-2-1.png" width="672" />
+<img src="../../../../../_posts/images/unnamed-chunk-2-1.png" width="672" />
 
 How about a boxplot?
 
     new_data = iris[["Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width"]]
     new_data.boxplot()
 
-<img src="../_posts/images/unnamed-chunk-3-3.png" width="672" />
+<img src="../../../../../_posts/images/unnamed-chunk-3-3.png" width="672" />
 
 If we wanted to add a title and axis labels to the plot:
 
@@ -51,7 +51,7 @@ If we wanted to add a title and axis labels to the plot:
     plt.xlabel("Measurements")
     plt.ylabel("Values")
 
-<img src="../_posts/images/unnamed-chunk-4-5.png" width="672" />
+<img src="../../../../../_posts/images/unnamed-chunk-4-5.png" width="672" />
 
 We can also use the functions `plt.hist()` and `plt.bar()` to generate
 histograms and boxplots, respectively.
