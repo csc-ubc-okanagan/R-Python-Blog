@@ -9,9 +9,11 @@ Let’s switch things up now and use a different data set to visualize.
 Like R, Python has a few built-in data sets. A popular R dataset, iris,
 can also be found in Python. Let’s load the iris data set here.
 
-    import statsmodels.api as sm
-    iris = sm.datasets.get_rdataset('iris').data
-    iris
+``` python
+import statsmodels.api as sm
+iris = sm.datasets.get_rdataset('iris').data
+iris
+```
 
     ##      Sepal.Length  Sepal.Width  Petal.Length  Petal.Width    Species
     ## 0             5.1          3.5           1.4          0.2     setosa
@@ -32,24 +34,30 @@ Let’s first start by looking at matplotlib.
 
 We will take a look at a scatterplot of the first two columns in iris.
 
-    import matplotlib.pyplot as plt
-    plt.scatter(x = iris['Sepal.Length'], y = iris['Sepal.Width'])
+``` python
+import matplotlib.pyplot as plt
+plt.scatter(x = iris['Sepal.Length'], y = iris['Sepal.Width'])
+```
 
 <img src="../_posts/images/unnamed-chunk-2-1.png" width="672" />
 
 How about a boxplot?
 
-    new_data = iris[["Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width"]]
-    new_data.boxplot()
+``` python
+new_data = iris[["Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width"]]
+new_data.boxplot()
+```
 
 <img src="../_posts/images/unnamed-chunk-3-3.png" width="672" />
 
 If we wanted to add a title and axis labels to the plot:
 
-    new_data.boxplot()
-    plt.title("Sample Boxplot")
-    plt.xlabel("Measurements")
-    plt.ylabel("Values")
+``` python
+new_data.boxplot()
+plt.title("Sample Boxplot")
+plt.xlabel("Measurements")
+plt.ylabel("Values")
+```
 
 <img src="../_posts/images/unnamed-chunk-4-5.png" width="672" />
 
@@ -61,12 +69,14 @@ Now, let’s take a look at a few of Altair’s functions.
 In order to use Altair, we have to change the column names because it
 does not support the functionality with `Column.Name`.
 
-    # rename columns
-    iris = iris.rename(columns={'Sepal.Length': 'SepalLength', 
-                                'Sepal.Width': 'SepalWidth',
-                               'Petal.Length': 'PetalLength',
-                               'Petal.Width': 'PetalWidth'})
-    iris
+``` python
+# rename columns
+iris = iris.rename(columns={'Sepal.Length': 'SepalLength', 
+                            'Sepal.Width': 'SepalWidth',
+                           'Petal.Length': 'PetalLength',
+                           'Petal.Width': 'PetalWidth'})
+iris
+```
 
     ##      SepalLength  SepalWidth  PetalLength  PetalWidth    Species
     ## 0            5.1         3.5          1.4         0.2     setosa
@@ -85,7 +95,9 @@ does not support the functionality with `Column.Name`.
 
 Let’s check the data types.
 
-    iris.dtypes
+``` python
+iris.dtypes
+```
 
     ## SepalLength    float64
     ## SepalWidth     float64
@@ -97,11 +109,13 @@ Let’s check the data types.
 Now that we’re ready, let’s view a scatter plot of the first two columns
 in iris.
 
-    import altair as alt
-    alt.Chart(iris).mark_point().encode(
-          x = 'SepalLength',
-          y = 'SepalWidth'
-    )
+``` python
+import altair as alt
+alt.Chart(iris).mark_point().encode(
+      x = 'SepalLength',
+      y = 'SepalWidth'
+)
+```
 
 <!DOCTYPE html>
 <html>
@@ -143,11 +157,13 @@ If we wanted to view this same scatterplot but also distinguish by
 colour, we could add in one small line at the end. Also, let’s add some
 axis titles and change the scale to reduce the white space.
 
-    alt.Chart(iris, title="Comparing Sepal Length to Sepal Width").mark_point().encode(
-          x = alt.X('SepalLength', title = 'Sepal Length', scale = alt.Scale(domain = (4,9))),
-          y = alt.Y('SepalWidth', title = 'Sepal Width', scale = alt.Scale(domain = (1.5,4.5))),
-          color = 'Species'
-    )
+``` python
+alt.Chart(iris, title="Comparing Sepal Length to Sepal Width").mark_point().encode(
+      x = alt.X('SepalLength', title = 'Sepal Length', scale = alt.Scale(domain = (4,9))),
+      y = alt.Y('SepalWidth', title = 'Sepal Width', scale = alt.Scale(domain = (1.5,4.5))),
+      color = 'Species'
+)
+```
 
 <!DOCTYPE html>
 <html>
@@ -190,12 +206,14 @@ Unfortunately, Altair only accepts the US spelling of colour!
 We see that the red and orange are a bit hard to distinguish. We can add
 in different shapes to help distinguish between species.
 
-    alt.Chart(iris, title="Comparing Sepal Length to Sepal Width").mark_point().encode(
-          x = alt.X('SepalLength', title = 'Sepal Length', scale = alt.Scale(domain = (4,9))),
-          y = alt.Y('SepalWidth', title = 'Sepal Width', scale = alt.Scale(domain = (1.5,4.5))),
-          color = 'Species',
-          shape = 'Species'
-    )
+``` python
+alt.Chart(iris, title="Comparing Sepal Length to Sepal Width").mark_point().encode(
+      x = alt.X('SepalLength', title = 'Sepal Length', scale = alt.Scale(domain = (4,9))),
+      y = alt.Y('SepalWidth', title = 'Sepal Width', scale = alt.Scale(domain = (1.5,4.5))),
+      color = 'Species',
+      shape = 'Species'
+)
+```
 
 <!DOCTYPE html>
 <html>
@@ -240,12 +258,14 @@ interact with the plot.
 
 Let’s add a tooltip to the scatterplot above to see how it looks.
 
-    alt.Chart(iris, title="Comparing Sepal Length to Sepal Width").mark_point().encode(
-          x = alt.X('SepalLength', title = 'Sepal Length', scale = alt.Scale(domain = (4,9))),
-          y = alt.Y('SepalWidth', title = 'Sepal Width', scale = alt.Scale(domain = (1.5,4.5))),
-          color = 'Species',
-          shape = 'Species',
-          tooltip = ('Species'))
+``` python
+alt.Chart(iris, title="Comparing Sepal Length to Sepal Width").mark_point().encode(
+      x = alt.X('SepalLength', title = 'Sepal Length', scale = alt.Scale(domain = (4,9))),
+      y = alt.Y('SepalWidth', title = 'Sepal Width', scale = alt.Scale(domain = (1.5,4.5))),
+      color = 'Species',
+      shape = 'Species',
+      tooltip = ('Species'))
+```
 
 <!DOCTYPE html>
 <html>
@@ -289,13 +309,15 @@ argument.
 
 We can add as many different columns to the tooltip as we want.
 
-    alt.Chart(iris, title="Comparing Sepal Length to Sepal Width").mark_point().encode(
-          x = alt.X('SepalLength', title = 'Sepal Length', scale = alt.Scale(domain = (4,9))),
-          y = alt.Y('SepalWidth', title = 'Sepal Width', scale = alt.Scale(domain = (1.5,4.5))),
-          color = 'Species',
-          shape = 'Species',
-          tooltip = (['Species','SepalLength','SepalWidth','PetalLength','PetalWidth'])
-    )
+``` python
+alt.Chart(iris, title="Comparing Sepal Length to Sepal Width").mark_point().encode(
+      x = alt.X('SepalLength', title = 'Sepal Length', scale = alt.Scale(domain = (4,9))),
+      y = alt.Y('SepalWidth', title = 'Sepal Width', scale = alt.Scale(domain = (1.5,4.5))),
+      color = 'Species',
+      shape = 'Species',
+      tooltip = (['Species','SepalLength','SepalWidth','PetalLength','PetalWidth'])
+)
+```
 
 <!DOCTYPE html>
 <html>
@@ -336,13 +358,15 @@ We can add as many different columns to the tooltip as we want.
 Another feature we can add is the ability to make the graph interactive.
 This would allow the user to scroll or zoom.
 
-    alt.Chart(iris, title="Comparing Sepal Length to Sepal Width").mark_point().encode(
-          x = alt.X('SepalLength', title = 'Sepal Length', scale = alt.Scale(domain = (4,9))),
-          y = alt.Y('SepalWidth', title = 'Sepal Width', scale = alt.Scale(domain = (1.5,4.5))),
-          color = 'Species',
-          shape = 'Species',
-          tooltip = (['Species','SepalLength','SepalWidth','PetalLength','PetalWidth'])
-    ).interactive()
+``` python
+alt.Chart(iris, title="Comparing Sepal Length to Sepal Width").mark_point().encode(
+      x = alt.X('SepalLength', title = 'Sepal Length', scale = alt.Scale(domain = (4,9))),
+      y = alt.Y('SepalWidth', title = 'Sepal Width', scale = alt.Scale(domain = (1.5,4.5))),
+      color = 'Species',
+      shape = 'Species',
+      tooltip = (['Species','SepalLength','SepalWidth','PetalLength','PetalWidth'])
+).interactive()
+```
 
 <!DOCTYPE html>
 <html>
@@ -386,13 +410,15 @@ different than `mark_point()`.
 We can show the same graph as above, but with `mark_circle()` instead of
 `mark_point()`.
 
-    alt.Chart(iris, title="Comparing Sepal Length to Sepal Width").mark_circle().encode(
-          x = alt.X('SepalLength', title = 'Sepal Length', scale = alt.Scale(domain = (4,9))),
-          y = alt.Y('SepalWidth', title = 'Sepal Width', scale = alt.Scale(domain = (1.5,4.5))),
-          color = 'Species',
-          shape = 'Species',
-          tooltip = (['Species','SepalLength','SepalWidth','PetalLength','PetalWidth'])
-    ).interactive()
+``` python
+alt.Chart(iris, title="Comparing Sepal Length to Sepal Width").mark_circle().encode(
+      x = alt.X('SepalLength', title = 'Sepal Length', scale = alt.Scale(domain = (4,9))),
+      y = alt.Y('SepalWidth', title = 'Sepal Width', scale = alt.Scale(domain = (1.5,4.5))),
+      color = 'Species',
+      shape = 'Species',
+      tooltip = (['Species','SepalLength','SepalWidth','PetalLength','PetalWidth'])
+).interactive()
+```
 
 <!DOCTYPE html>
 <html>
@@ -432,12 +458,14 @@ We can show the same graph as above, but with `mark_circle()` instead of
 
 Let’s take a look at `mark_line()`, and let’s remove the shape argument.
 
-    alt.Chart(iris, title="Comparing Sepal Length to Sepal Width").mark_line().encode(
-          x = alt.X('SepalLength', title = 'Sepal Length', scale = alt.Scale(domain = (4,9))),
-          y = alt.Y('SepalWidth', title = 'Sepal Width', scale = alt.Scale(domain = (1.5,4.5))),
-          color = 'Species',
-          tooltip = (['Species','SepalLength','SepalWidth','PetalLength','PetalWidth'])
-    ).interactive()
+``` python
+alt.Chart(iris, title="Comparing Sepal Length to Sepal Width").mark_line().encode(
+      x = alt.X('SepalLength', title = 'Sepal Length', scale = alt.Scale(domain = (4,9))),
+      y = alt.Y('SepalWidth', title = 'Sepal Width', scale = alt.Scale(domain = (1.5,4.5))),
+      color = 'Species',
+      tooltip = (['Species','SepalLength','SepalWidth','PetalLength','PetalWidth'])
+).interactive()
+```
 
 <!DOCTYPE html>
 <html>
@@ -478,19 +506,21 @@ Let’s take a look at `mark_line()`, and let’s remove the shape argument.
 We can overlay plots on top of each other. Let’s plot the scatterplot
 and lines together.
 
-    line = alt.Chart(iris, title="Comparing Sepal Length to Sepal Width").mark_line().encode(
-          x = alt.X('SepalLength', title = 'Sepal Length', scale = alt.Scale(domain = (4,9))),
-          y = alt.Y('SepalWidth', title = 'Sepal Width', scale = alt.Scale(domain = (1.5,4.5))),
-          color = 'Species',
-          tooltip = (['Species','SepalLength','SepalWidth','PetalLength','PetalWidth'])
-    ).interactive()
+``` python
+line = alt.Chart(iris, title="Comparing Sepal Length to Sepal Width").mark_line().encode(
+      x = alt.X('SepalLength', title = 'Sepal Length', scale = alt.Scale(domain = (4,9))),
+      y = alt.Y('SepalWidth', title = 'Sepal Width', scale = alt.Scale(domain = (1.5,4.5))),
+      color = 'Species',
+      tooltip = (['Species','SepalLength','SepalWidth','PetalLength','PetalWidth'])
+).interactive()
 
-    point = alt.Chart(iris).mark_point().encode(
-      x = 'SepalLength',
-      y = 'SepalWidth',
-       color = 'Species')
+point = alt.Chart(iris).mark_point().encode(
+  x = 'SepalLength',
+  y = 'SepalWidth',
+   color = 'Species')
 
-    line + point
+line + point
+```
 
 <!DOCTYPE html>
 <html>
@@ -546,10 +576,12 @@ like. First, let’s introduce a boxplot.
 If we wanted to show a boxplot for the different petal lengths, we could
 do so like this:
 
-    alt.Chart(iris, title = 'Petal Lengths of Species').mark_boxplot().encode(
-          x = alt.X('Species', title = 'Type of Species'),
-          y = alt.Y('PetalLength', title = 'Petal Length')
-    )
+``` python
+alt.Chart(iris, title = 'Petal Lengths of Species').mark_boxplot().encode(
+      x = alt.X('Species', title = 'Type of Species'),
+      y = alt.Y('PetalLength', title = 'Petal Length')
+)
+```
 
 <!DOCTYPE html>
 <html>
@@ -590,12 +622,14 @@ do so like this:
 To make it look nicer, we could add colour to each species, and then
 store it as a variable.
 
-    box = alt.Chart(iris, title = 'Petal Lengths of Species').mark_boxplot().encode(
-          x = alt.X('Species', title = 'Type of Species'),
-          y = alt.Y('PetalLength', title = 'Petal Length'),
-          color = 'Species'
-    )
-    box
+``` python
+box = alt.Chart(iris, title = 'Petal Lengths of Species').mark_boxplot().encode(
+      x = alt.X('Species', title = 'Type of Species'),
+      y = alt.Y('PetalLength', title = 'Petal Length'),
+      color = 'Species'
+)
+box
+```
 
 <!DOCTYPE html>
 <html>
