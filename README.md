@@ -55,19 +55,17 @@ For more basic GitHub commands and workflow learnings, visit [this link here.](h
 2. The top section of the document should look like this example:
 ```
 ---
-title: Dictionaries in Python # update this title which will be viewable in the blog
+title:  Dictionaries in Python # update this title which will be viewable in the blog
 date: '2023-06-21 09:00:00 -0800' # update the date - the time isn't overly important
-categories: [Python, Getting Started] # update these categories with the primary category first, sub category second
+categories:  [Python, P_Getting Started] # update these categories with the primary category first, sub category second
 tags: [python] # tags always lowercase except for just 'R' as a tag
 author: madison # update this accordingly
-output:
-  html_document:
-    keep_md: TRUE
+output: md_document
 ---
    ```
 3. Begin writing the body of the post as a normal `.rmd` document with text, code chunks in R, Python, or both!
 
-4. Once the post is completed, knit the file. In the same `_src` file, an `HTML` and `MD` file will be created. Delete the `HTML` file, and then move the `MD` file into the `_posts` folder.
+4. Once the post is completed, knit the file. In the `_src` file, the `.rmd` file will remain. It will knit the completed `md` file to the `_posts` folder.
 
 Once this is done, commit the changes to the repo and the new blog version should be deployed.
 
