@@ -65,7 +65,7 @@ output: md_document
    ```
 3. Begin writing the body of the post as a normal `.rmd` document with text, code chunks in R, Python, or both!
 
-4. Once the post is completed, knit the file. In the `_src` file, the `.rmd` file will remain. It will knit the completed `md` file to the `_posts` folder.
+4. Once the post is completed, knit the file. In the same `_src` file, an `HTML` and `MD` file will be created. Delete the `HTML` file, and then move the `MD` file into the `_posts` folder.
 
 Once this is done, commit the changes to the repo and the new blog version should be deployed.
 
