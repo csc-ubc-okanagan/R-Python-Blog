@@ -5,7 +5,9 @@ categories: [R, R_Data]
 tags: [R, data-structures, wrangling] # tags always lowercase
 author: stefano
 math: true # to enable math (not on by default)
-output: md_document
+output: 
+  html_document:
+    keep_md: TRUE
 ---
 
 \usepackage{amsmath}

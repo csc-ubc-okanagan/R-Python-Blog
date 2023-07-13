@@ -4,7 +4,7 @@ date: ‘2023-06-05 11:00:00 -0800’
 categories: [Python, IDE]
 tags: [python, jupyter]
 author: madison
-output:
+output: 
   html_document:
     keep_md: TRUE
 ---

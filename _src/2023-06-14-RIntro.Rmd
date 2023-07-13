@@ -4,7 +4,9 @@ date: '2023-06-14 09:00:00 -0800'
 categories: [R, R_Getting Started]
 tags: [R]
 author: madison
-output: md_document
+output: 
+  html_document:
+    keep_md: TRUE
 ---
 
 ```{r setup, include=FALSE}

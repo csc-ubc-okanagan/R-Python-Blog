@@ -5,7 +5,9 @@ categories: [R, R_Getting Started]
 tags: [R, windows] # tags always lowercase
 author: stefano
 math: false # to enable math (not on by default)
-output: md_document
+output: 
+  html_document:
+    keep_md: TRUE
 ---
 
 <!-- https://chirpy.cotes.page/posts/write-a-new-post/ -->

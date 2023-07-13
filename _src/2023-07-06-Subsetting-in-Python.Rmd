@@ -4,7 +4,9 @@ date: '2023-07-07 09:00:00 -0800'
 categories: [Python, P_Data]
 tags: [python] # tags always lowercase
 author: madison
-output: md_document
+output: 
+  html_document:
+    keep_md: TRUE
 ---
 
 ```{r setup, include=FALSE}
