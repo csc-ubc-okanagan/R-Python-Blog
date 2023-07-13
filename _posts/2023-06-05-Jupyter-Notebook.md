@@ -10,9 +10,7 @@ output:
 ---
 
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+
 
 Jupyter Notebook is a web-based interactive computing platform, and it can be used for many things, aside from Python. You can even use both R and Python within the same document.
 
