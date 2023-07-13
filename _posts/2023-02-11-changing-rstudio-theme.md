@@ -13,4 +13,4 @@ To add use this theme, go to `Tools > Global Options`, then select
 `Appearance`, and click on `Add`. Finally, select the
 `Black Rmd.rstheme` file, and click on `Open`.
 
-![](figures/dark-theme-example.png)
+![](/figures/dark-theme-example.png)
