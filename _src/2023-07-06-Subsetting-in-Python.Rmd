@@ -1,12 +1,10 @@
 ---
 title: Subsetting in Python
 date: '2023-07-07 09:00:00 -0800'
-categories: [Python, Data]
+categories: [Python, P_Data]
 tags: [python] # tags always lowercase
 author: madison
-output:
-  html_document:
-    keep_md: TRUE
+output: md_document
 ---
 
 ```{r setup, include=FALSE}

@@ -1,12 +1,10 @@
 ---
 title: Introduction to R
 date: '2023-06-14 09:00:00 -0800'
-categories: [R, Getting Started]
+categories: [R, R_Getting Started]
 tags: [R]
 author: madison
-output:
-  html_document:
-    keep_md: TRUE
+output: md_document
 ---
 
 ```{r setup, include=FALSE}

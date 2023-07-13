@@ -2,12 +2,10 @@
 
 title: Reading Data in Python
 date: ‘2023-06-05 11:00:00 -0800’
-categories: [Python, Data]
+categories: [Python, P_Data]
 tags: [python, data]
 author: madison
-output:
-  html_document:
-    keep_md: TRUE
+output: md_document
 ---
 
     

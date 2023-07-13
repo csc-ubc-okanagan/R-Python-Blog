@@ -1,144 +1,80 @@
----
-title: Lists in Python
-date: '2023-06-15 09:00:00 -0800'
-categories: [Python, Getting Started]
-tags: [python] # tags always lowercase
-author: madison
-output:
-  html_document:
-    keep_md: TRUE
----
+Lists are an important tool used in Python. Lists can contain elements
+of mixed types as well. Let’s look at a few examples.
 
+    # List
+    list1 = []
+    list1
 
+    ## []
 
+    list2 = [1, 'UBC', 100]
+    list2
 
-Lists are an important tool used in Python. Lists can contain elements of mixed types as well. Let's look at a few examples.
+    ## [1, 'UBC', 100]
 
+Now let’s see a few operations we can perform on a list.
 
-```python
-# List
-list1 = []
-list1
-```
+    len(list1)
 
-```
-## []
-```
+    ## 0
 
+    len(list2)
 
-```python
-list2 = [1, 'UBC', 100]
-list2
-```
+    ## 3
 
-```
-## [1, 'UBC', 100]
-```
+    # Indexing Example - we will talk more about this later on
+    list2[2]
 
-Now let's see a few operations we can perform on a list.
+    ## 100
 
+Note - Python indexing starts at zero, so the first element in the list
+is 0, the second is 1, and the third is 2, so if we actually wanted the
+second element, we would have to do this:
 
-```python
-len(list1)
-```
+    list2[1]
 
-```
-## 0
-```
+    ## 'UBC'
 
+    type(list2)
 
-```python
-len(list2)
-```
+    ## <class 'list'>
 
-```
-## 3
-```
+    type(list2[1])
 
+    ## <class 'str'>
 
-```python
-# Indexing Example - we will talk more about this later on
-list2[2]
-```
+As we mentioned earlier, a main difference between lists and tuples is
+that lists are mutable. Mutable means that elements in a list can be
+appended, changed, or deleted.
 
-```
-## 100
-```
-Note - Python indexing starts at zero, so the first element in the list is 0, the second is 1, and the third is 2, so if we actually wanted the second element, we would have to do this:
+    mixed_list = [1, 'UBC', 5.0, '1']
+    mixed_list.append('New')
+    mixed_list
 
+    ## [1, 'UBC', 5.0, '1', 'New']
 
-```python
-list2[1]
-```
+If we decided that we wanted to replace ‘New’ with 4, we could do so
+like this:
 
-```
-## 'UBC'
-```
+    mixed_list[4]= 4
+    mixed_list
 
+    ## [1, 'UBC', 5.0, '1', 4]
 
-```python
-type(list2)
-```
-
-```
-## <class 'list'>
-```
-
-
-```python
-type(list2[1])
-```
-
-```
-## <class 'str'>
-```
-
-
-As we mentioned earlier, a main difference between lists and tuples is that lists are mutable. Mutable means that elements in a list can be appended, changed, or deleted. 
-
-
-```python
-mixed_list = [1, 'UBC', 5.0, '1']
-mixed_list.append('New')
-mixed_list
-```
-
-```
-## [1, 'UBC', 5.0, '1', 'New']
-```
-If we decided that we wanted to replace 'New' with 4, we could do so like this:
-
-
-```python
-mixed_list[4]= 4
-mixed_list
-```
-
-```
-## [1, 'UBC', 5.0, '1', 4]
-```
 If we wanted to remove elements from the list, we could do so like this:
 
+    mixed_list.remove('UBC')
+    mixed_list
 
-```python
-mixed_list.remove('UBC')
-mixed_list
-```
+    ## [1, 5.0, '1', 4]
 
-```
-## [1, 5.0, '1', 4]
-```
-
-Note that this will only remove the first occurrence, if this happened to be in the list more than once. It would also call an error message if the element doesn't exist.
+Note that this will only remove the first occurrence, if this happened
+to be in the list more than once. It would also call an error message if
+the element doesn’t exist.
 
 If we wanted to remove it based on the index of the list:
 
+    del mixed_list[0]
+    mixed_list
 
-```python
-del mixed_list[0]
-mixed_list
-```
-
-```
-## [5.0, '1', 4]
-```
+    ## [5.0, '1', 4]

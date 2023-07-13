@@ -1,13 +1,11 @@
 ---
 title: Searching for files with the `findR` package
 date: '2023-03-09 18:00:00 -0800'
-categories: [R, Getting Started]
+categories: [R, R_Getting Started]
 tags: [R, windows] # tags always lowercase
 author: stefano
 math: false # to enable math (not on by default)
-output:
-  html_document:
-    keep_md: TRUE
+output: md_document
 ---
 
 <!-- https://chirpy.cotes.page/posts/write-a-new-post/ -->
