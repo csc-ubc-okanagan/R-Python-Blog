@@ -15,4 +15,4 @@ Color schemes are a matter of preference, but I think many of us can agree that 
 
 Of the default themes, the Cobalt theme is my preferred one, but I find some of the colors to be too similar (such as the white for general text and the light blue used for headings in `R` Markdown documents). You can find the custom theme I use [on my GitHub page](https://github.com/StefanoMezzini/misc/blob/main/Black%20Rmd.rstheme). To add use this theme, go to `Tools > Global Options`, then select `Appearance`, and click on `Add`. Finally, select the `Black Rmd.rstheme` file, and click on `Open`.
 
-![](figures/dark-theme-example.png)<!-- -->
+![](/figures/dark-theme-example.png)<!-- -->
