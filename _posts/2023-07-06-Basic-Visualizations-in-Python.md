@@ -10,7 +10,7 @@ Let’s re-load in our Gapminder data:
     import matplotlib.pyplot as plt
     plt.scatter(x = df['year'], y = df['pop'])
 
-<img src="/_posts/2023-07-06-Basic-Visualizations-in-Python_files/figure-markdown_strict/unnamed-chunk-2-1.png" width="672" />
+<img src="/posts/2023-07-06-Basic-Visualizations-in-Python_files/figure-markdown_strict/unnamed-chunk-2-1.png" width="672" />
 
     df_AF = df[df['continent'] == 'Africa']
     df_AF.head()
@@ -24,7 +24,7 @@ Let’s re-load in our Gapminder data:
 
     plt.scatter(x = df_AF['year'], y = df_AF['pop'])
 
-<img src="/_posts/2023-07-06-Basic-Visualizations-in-Python_files/figure-markdown_strict/unnamed-chunk-3-3.png" width="672" />
+<img src="/posts/2023-07-06-Basic-Visualizations-in-Python_files/figure-markdown_strict/unnamed-chunk-3-3.png" width="672" />
 
 Base Python works well for simple visualizations, but Altair is a
 package that helps to create personalized and detailed visualizations to
