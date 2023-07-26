@@ -60,7 +60,9 @@ date: '2023-06-21 09:00:00 -0800' # update the date - the time isn't overly impo
 categories:  [Python, P_Getting Started] # update these categories with the primary category first, sub category second
 tags: [python] # tags always lowercase except for just 'R' as a tag
 author: madison # update this accordingly
-output: md_document
+output: 
+  html_document:
+    keep_md: TRUE
 ---
    ```
 3. Begin writing the body of the post as a normal `.rmd` document with text, code chunks in R, Python, or both!
