@@ -23,12 +23,12 @@ url = 'https://raw.githubusercontent.com/jstaf/gapminder/master/gapminder/gapmin
 df = pd.read_csv(url)
 ```
 
-```{python}
+```{python, results=FALSE}
 import matplotlib.pyplot as plt
 plt.scatter(x = df['year'], y = df['pop'])
 ```
 
-```{python}
+```{python, results=FALSE}
 df_AF = df[df['continent'] == 'Africa']
 df_AF.head()
 
