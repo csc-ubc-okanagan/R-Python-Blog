@@ -1,0 +1,32 @@
+---
+title: Python vs R - How To Decide?
+date: '2023-07-26 09:00:00 -0800'
+categories: [Python, R]
+tags: [python]
+author: madison
+output: 
+  html_document:
+    keep_md: TRUE
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Python and R are both very useful tools in academia, research, industry, and everywhere! They have a lot of similarities, but there are also many differences. It is also easier to learn one if you already have familiarity with the other.
+
+The purpose of this post is to help students to decide which language to learn first, according to a few different pros and cons, and departmental practices.
+
+First, let's talk about some pros and cons and common uses for each of the languages.
+
+We'll start out with Python. Python is a general-purpose, object-oriented programming language. It was created in 1991, and it has a community of people who contribute to regularly updating libraries and improving efficiencies. It happens to be one of the most popular programming langauges in the world. Some of the most common libraries for data-related tasks include NumPy (for arrays), Pandas (for data analysis and manipulation), and MatPlotLib (for data visualizations). Python is a powerful tool used for machine learning, deep learning, and modelling. Jupyter Notebook is a useful interface to pair with Python because it allows for clean, readable layouts to be shared with peers and users. Note that Jupyter Notebook also supports R. 
+
+Python is commonly used in disciplines such as computer science, data science, ...
+Python is 
+
+# Python
+PROS | CONS
+--- | ---
+
+R was created for statistics originally, specializing in statistical analysis and visualization. R was created in 1993, but generally has less community support and less advancements than Python. This is one of the major complaints of users, and is one reason why many people end up turning to Python over R. Libraries and tools in R are best known for helping with tasks such as cleaning data, creating visualization, and training some machine learning and deep learning algorithms. Note that R can take significantly longer to handle machine learning algorithms than alternatives such as Python.
+
+Both R and Python are open source programming languages that are maintained and supported by large communities. 
