@@ -38,11 +38,11 @@ Now that the *reticulate* package has been installed, we can start using Python 
 
 Once an RMarkdown file has been started, create a new code block. Note that on a Windows, a shortcut for adding a new code block is Ctrl+alt+i. Once a new code block appears, it should look like this:
 
-![](figures/r-code-chunk.png)<!-- -->
+![](/figures/r-code-chunk.png)<!-- -->
 
 If you were to type code here, it would be in R. To change it to Python, simply replace the 'r' with 'python'. Then it will look like this:
 
-![](figures/python-code-chunk.png)<!-- -->
+![](/figures/python-code-chunk.png)<!-- -->
 
 Now, the console below will change to show Python code once something in this block is run. You can easily switch back and forth between R and Python from code chunk to code chunk. 
 
@@ -50,6 +50,6 @@ You can also see your saved variables in the environment, separated between R an
 
 To change between R and Python environments, go to the Environment window and click the dropdown arrow. It should look like this:
 
-![](figures/environment.png)<!-- -->
+![](/figures/environment.png)<!-- -->
 
 If you would like to see some examples, take a look at the `_src` folder in the GitHub repo for this blog to see how each of the posts are created in both R and Python. The link to the backend content for this blog can be found [here](https://github.com/csc-ubc-okanagan/R-Python-Blog).
