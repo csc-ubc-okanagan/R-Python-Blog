@@ -8,9 +8,7 @@ output:
   html_document:
     keep_md: TRUE
 ---
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+
 
 Python and R are both very useful tools in academia, research, industry, and everywhere! They have a lot of similarities, but there are also many differences.
 
