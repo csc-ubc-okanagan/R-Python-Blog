@@ -1,8 +1,8 @@
 ---
 title: Python vs R - How To Decide?
 date: '2023-07-26 09:00:00 -0800'
-categories: [Python, R]
-tags: [python]
+categories: [Python]
+tags: [python, R]
 author: madison
 output: 
   html_document:
