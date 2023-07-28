@@ -29,25 +29,41 @@ Let’s first start by looking at matplotlib.
 
 We will take a look at a scatterplot of the first two columns in iris.
 
-```{python}
+```{python, fig.show='hide'}
 import matplotlib.pyplot as plt
 plt.scatter(x = iris['Sepal.Length'], y = iris['Sepal.Width'])
 ```
 
+```{r}
+setwd('../')
+knitr::include_graphics('figures/altair-plot-1.png')
+```
+
+
 How about a boxplot?
 
-```{python}
+```{python, fig.show='hide'}
 new_data = iris[["Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width"]]
 new_data.boxplot()
 ```
 
+```{r}
+setwd('../')
+knitr::include_graphics('figures/altair-plot-2.png')
+```
+
 If we wanted to add a title and axis labels to the plot:
 
-```{python}
+```{python, fig.show='hide'}
 new_data.boxplot()
 plt.title("Sample Boxplot")
 plt.xlabel("Measurements")
 plt.ylabel("Values")
+```
+
+```{r}
+setwd('../')
+knitr::include_graphics('figures/altair-plot-3.png')
 ```
 
 We can also use the functions `plt.hist()` and `plt.bar()` to generate histograms and boxplots, respectively.
