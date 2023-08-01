@@ -1,0 +1,64 @@
+---
+title: Basic Model Fitting in R
+date: '2023-08-01 09:00:00 -0800'
+categories: [R, R_Modelling]
+tags: [R, modelling] # tags always lowercase
+author: madison
+output: 
+  html_document:
+    keep_md: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+In previous categories we have looked at cleaning, summarizing, and subsetting data, with some minor calculations, but we haven’t yet looked at analyzing our data.
+
+R is a very powerful tool for data analysis. We can fit linear models and view graphs. First, we will look at some basic data analysis processes in R.
+
+Let’s re-load in our Gapminder data:
+
+```{r}
+link <- 'https://raw.githubusercontent.com/jstaf/gapminder/master/gapminder/gapminder.csv'
+df <- read.csv(url(link))
+head(df)
+```
+
+# Linear Modelling
+
+Let’s say we want to fit a linear model to see if there is a relationship between population and time. First, let’s do this with the entire dataset with all countries. 
+
+We know that there is Simple Linear Regression (SLR) and Multiple Linear Regression (MLR). See the pseudocode below for a layout on how to form both in R.
+
+```{r}
+# Simple Linear Regression
+# model_name <- lm(Y ~ X, data = dataframe)
+
+# Multiple Linear Regression
+# model_name <- lm(Y ~ X1 + X2 + ..., data = dataframe)
+# model_name <- lm(Y ~ ., data = dataframe) to use all variables except Y
+```
+
+Now that we have the layout of the code down, let's use Y as population and X as year for an SLR model.
+
+```{r}
+model1 <- lm(pop ~ year, data = df)
+summary(model1)
+```
+Now, let's perform MLR with two variables, year and lifeExp.
+
+```{r}
+model2 <- lm(pop ~ year + lifeExp, data = df)
+summary(model2)
+```
+
+Finally, let's perform MLR with all variables in the dataset.
+
+```{r}
+model3 <- lm(pop ~ ., data = df)
+summary(model3)
+```
+
+
+Note that the outputs give us a lot of information. We see the default hypotheses tested, with p-values for each coefficient and for the model as a whole. We see the RSE and the degrees of freedom, F-test, R-squared values, and much more! There are a lot of insights that we can extract from this simple output.
