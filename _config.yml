@@ -21,7 +21,7 @@ timezone: America/Vancouver
 
 title: R & Python Blog # the main title
 
-tagline: Brought to you by UBCO's Center for Scholarly Communication. # it will display as the sub-title
+tagline: Brought to you by UBCO's Centre for Scholarly Communication. # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   A concise blog for help with R and Python.
