@@ -1,6 +1,6 @@
 ---
 title: Sample Data Generation
-date: '2024-04-09 09:00:00 -0800'
+date: '2024-04-08 09:00:00 -0800'
 categories: [Python, R]
 tags: [python, r] # tags always lowercase
 author: nijiati
