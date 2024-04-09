@@ -9,8 +9,6 @@ output:
     keep_md: TRUE
 ---
 
-
-
 ## Creating Sample Datasets
 
 This guide provides instructions on how to create sample datasets in `R` and `Python`. You can use these methods to generate a mini version of your original dataset for data consultations, enabling efficient and effective analysis on a manageable subset of your data. We assume you know how to read in your data, however, if you need step by step instructions on this, these are available further down the page for both `R` and `Python`.
