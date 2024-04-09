@@ -12,7 +12,7 @@
   /* Common color */
   --text-color: rgb(175, 176, 177); // links in footer and paginator number
   --text-muted-color: rgb(107, 116, 124); // unknown
-  --heading-color: #cccccc; // header on pages (e.g., Categories)
+  --heading-color: #cccccc !important; // header on pages (e.g., Categories)
   --blockquote-border-color: rgb(66, 66, 66); // unknown
   --blockquote-text-color: rgb(117, 117, 117); // unknown
   --link-color: rgb(138, 180, 248);
