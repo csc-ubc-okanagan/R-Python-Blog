@@ -22,4 +22,7 @@ package-lock.json
 
 # htmls in source folder
 _src/*.html
+
+# ignore Rproj file
+R-Python-Blog.Rproj
 .Rproj.user
