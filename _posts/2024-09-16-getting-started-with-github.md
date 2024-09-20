@@ -17,3 +17,5 @@ Before we start, you will need to download and install [GitHub Desktop](https://
 
 To make your first repo, go to `File/New repository` or press `Ctrl + N`.
 
+![](figures/intro-to-gh/new-repo.png)
+
