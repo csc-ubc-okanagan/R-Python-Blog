@@ -111,11 +111,6 @@ cvd_grid(p_sh)
 
 Unlike with the `ggplot` functions for color palettes, the `khroma` function names do not specify whether the function will produce a continuous or discrete color palette. To avoid confusion, you can type `khroma::scale_color_` and press `Tab` to see what functions the package offers, and a helpful window should show up beside the function suggestion:
 
-
-``` r
-knitr::include_graphics('../figures/2023-02-11-making-colorblind-friendly-figures_files/figure-html/khroma-function-help.png')
-```
-
 ![](/figures/2023-02-11-making-colorblind-friendly-figures_files/figure-html/khroma-function-help.png)
 
 (*If you want to change your RStudio theme, see [this tutorial](https://csc-ubc-okanagan.github.io/R-Python-Blog/posts/changing-rstudio-theme/).*)
