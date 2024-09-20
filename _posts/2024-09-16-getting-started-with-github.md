@@ -15,5 +15,3 @@ output:
 
 Before we start, you will need to download and install [GitHub Desktop](https://github.com/apps/desktop) from [https://desktop.github.com/download/](https://desktop.github.com/download/). While it installs, make an account on [github.com](github.com) if you don't have one already.
 
-To make your first repo, go to `File/New repository` or press `Ctrl + N`.
-
