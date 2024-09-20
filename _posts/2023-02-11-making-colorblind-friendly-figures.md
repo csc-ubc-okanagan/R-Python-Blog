@@ -31,3 +31,5 @@ p <-
 p
 ```
 
+![](/figures/2023-02-11-making-colorblind-friendly-figures_files/figure-html/unnamed-chunk-1-1.png)
+
