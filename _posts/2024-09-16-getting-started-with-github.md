@@ -38,4 +38,4 @@ Now that the repo is on GitHub, you can start pushing and pulling content to and
 
 # References
 
-Braga P.H.P., Hébert K., Hudgins E.J., Scott E.R., Edwards B.P.M., Sánchez Reyes L.L., et al. (2023). Not just for programmers: How GitHub can accelerate collaborative and reproducible research in ecology and evolution. Methods in Ecology and Evolution 14, 1364–1380. https://doi.org/10.1111/2041-210X.14108
+Braga P.H.P., Hébert K., Hudgins E.J., Scott E.R., Edwards B.P.M., Sánchez Reyes L.L., et al. (2023). Not just for programmers: How GitHub can accelerate collaborative and reproducible research in ecology and evolution. Methods in Ecology and Evolution 14, 1364–1380. [https://doi.org/10.1111/2041-210X.14108](https://doi.org/10.1111/2041-210X.14108)
