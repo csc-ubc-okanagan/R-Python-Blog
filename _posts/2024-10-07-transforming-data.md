@@ -51,3 +51,5 @@ ggplot(d) +
   labs(x = 'Accidents per month', y = 'Count')
 ```
 
+![](figures/2024-10-07-transforming-data/unnamed-chunk-1-1.png)
+
