@@ -66,7 +66,7 @@ coef(m_1)
 ##    1.666667   -1.250000
 ```
 
-From the output of the `coef()` function, we can see that the estimated model is $$Y = 1.67 - 1.25\,x_1,$$ where $x_1$ is 0 for before the intervention and 1 for after. The `periodafter` coefficient indicates that there were -1.25 less accidents per month after the intervention. While this does not match the true effect of $2 - 0.4 = 1.6$, we should expect some random variation, and the estimate is still reasonable. Longer observational periods would give us more accurate estimates.
+From the output of the `coef()` function, we can see that the estimated model is $$Y = 1.67 - 1.25\,x_1,$$ where $x_1$ is 0 for before the intervention and 1 for after. The `periodafter` coefficient indicates that there were -1.25 less accidents per month after the intervention. While this does not match the true effect of $$2 - 0.4 = 1.6$$, we should expect some random variation, and the estimate is still reasonable. Longer observational periods would give us more accurate estimates.
 
 
 ``` r
