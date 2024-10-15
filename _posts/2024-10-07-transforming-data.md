@@ -76,10 +76,7 @@ From the output of the `coef()` function, we can see that the estimated model is
 appraise(m_1, point_alpha = 0.3)
 ```
 
-<div class="figure">
-<img src="figure/2024-10-07-transforming-data/unnamed-chunk-3-1.png" alt="plot of chunk unnamed-chunk-3" width="\linewidth" />
-<p class="caption">plot of chunk unnamed-chunk-3</p>
-</div>
+![](figure/2024-10-07-transforming-data/unnamed-chunk-3-1.png)
 
 Those who are used to looking at these plots may recognize two issues: (1) the residuals are not Gaussian (see the q-q plot and the histogram, in the left column), and (2) the variance in the observed values is lower when the predicted mean (linear predictor and fitted values) is lower. One may then decide to log-transform the number of accidents, after adding a small value to avoid taking the log of zero (since $\log(0) = - \infty$).
 
@@ -115,10 +112,7 @@ coef(m_2)
 appraise(m_2, point_alpha = 0.3)
 ```
 
-<div class="figure">
-<img src="figure/2024-10-07-transforming-data/unnamed-chunk-4-1.png" alt="plot of chunk unnamed-chunk-4" width="\linewidth" />
-<p class="caption">plot of chunk unnamed-chunk-4</p>
-</div>
+![](figure/2024-10-07-transforming-data/unnamed-chunk-4-1.png)
 
 The `log1p` transformation resulted in a somewhat more symmetrical distribution of residuals, and the mode of the distribution is closer to zero, and improved the issue of non-constant variance (heteroskedasticity). The coefficients are also harder to interpret because they are on the `log1p` scale, since the model is $$\log(Y+1)=0.86 - 0.60 \,x_1$$.
 
@@ -141,10 +135,7 @@ coef(m_3)
 appraise(m_3, point_alpha = 0.3)
 ```
 
-<div class="figure">
-<img src="figure/2024-10-07-transforming-data/unnamed-chunk-5-1.png" alt="plot of chunk unnamed-chunk-5" width="\linewidth" />
-<p class="caption">plot of chunk unnamed-chunk-5</p>
-</div>
+![](figure/2024-10-07-transforming-data/unnamed-chunk-5-1.png)
 
 The output from `coef()` tells us that the GLM is $$\lambda = e{0.51-1.39\,x_1}$$. This means that after the intervention, the number of accidents decreased to $e^-1.39 * 100%= 0.25%$ what they were in the 12 months before.
 
@@ -196,10 +187,7 @@ ggplot() +
   khroma::scale_color_highcontrast(name = 'Model')
 ```
 
-<div class="figure">
-<img src="figure/2024-10-07-transforming-data/unnamed-chunk-6-1.png" alt="plot of chunk unnamed-chunk-6" width="\linewidth" />
-<p class="caption">plot of chunk unnamed-chunk-6</p>
-</div>
+![](figure/2024-10-07-transforming-data/unnamed-chunk-6-1.png)
 
 From the plot above, we can see that the LM and GLM have fairly similar coefficient estimates and that the `log1p` LM resulted in lower estimates for both. This is due to a systematic bias that occurs when one applies a nonlinear transformation to a random variable, like taking $\$. I explain why in the sections below. Additionally, while the LM's coefficients are reasonable, the 95% [Bayesian Credible Intervals](https://en.wikipedia.org/wiki/Credible_interval) (BCIs) for the post-intervention estimate are not appropriate because they include negative values. In contrast, the GLM's BCIs are asymmetric: they are shorter below the mean and longer above the mean. This is recognizes that a multiplicative change for large values is larger than one for small values: a 50% decrease will take 2 to 1 and take 4 to 2. Consequently, asymmetric BCIs provide a better representation of the model's uncertainty.
 
@@ -213,10 +201,7 @@ Y <- seq(0.01, 2, by = 1e-3)
 ggplot() + geom_line(aes(Y, Y/10 + 3))
 ```
 
-<div class="figure">
-<img src="figure/2024-10-07-transforming-data/unnamed-chunk-7-1.png" alt="plot of chunk unnamed-chunk-7" width="\linewidth" />
-<p class="caption">plot of chunk unnamed-chunk-7</p>
-</div>
+![](figure/2024-10-07-transforming-data/unnamed-chunk-7-1.png)
 
 Conversely, nonlinear transformations are all transformations that cannot be written using only addition, subtraction, multiplications, or division. If we were to plot any of these functions, we would see a nonlinear relationship between the original and transformed values:
 
@@ -243,10 +228,7 @@ expand_grid(Y = Y,
 ## ! NaNs produced
 ```
 
-<div class="figure">
-<img src="figure/2024-10-07-transforming-data/unnamed-chunk-8-1.png" alt="plot of chunk unnamed-chunk-8" width="\linewidth" />
-<p class="caption">plot of chunk unnamed-chunk-8</p>
-</div>
+![](figure/2024-10-07-transforming-data/unnamed-chunk-8-1.png)
 
 ## Jensen's inequality
 
@@ -282,10 +264,7 @@ ggExtra::ggMarginal(
   yparams = list(bins = 5))
 ```
 
-<div class="figure">
-<img src="figure/2024-10-07-transforming-data/unnamed-chunk-9-1.png" alt="plot of chunk unnamed-chunk-9" width="\linewidth" />
-<p class="caption">plot of chunk unnamed-chunk-9</p>
-</div>
+![](figure/2024-10-07-transforming-data/unnamed-chunk-9-1.png)
 
 However, note that the transformations only cause bias if applied to random variables. You can apply nonlinear transformations to predictor variables that you assume are measured exactly right. This means that fitting a model of the form $Y = \beta_0 + \beta_1 \log(x_1)$ will not cause issues if you assume $x_1$ is exactly correct with no error (as we often assume). Applying nonlinear transformations on predictors can be useful when a predictor has a distribution with a very long tail, or if one wants to create a variable with diminishing effects (e.g., moving closer to something matters more when you're close and less when you're already far from it). I will make a blog post on this in the future.
 
