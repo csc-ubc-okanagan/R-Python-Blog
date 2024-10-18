@@ -4,6 +4,7 @@ date: '2024-10-07 14:00:00 -0800'
 categories: [R, modeling]
 tags: [R, rstudio] # tags always lowercase
 author: stefano
+math: yes
 output: 
   html_document:
     keep_md: TRUE
