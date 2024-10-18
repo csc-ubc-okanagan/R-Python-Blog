@@ -18,7 +18,7 @@ all(file.exists(paste0('figure/', figures))) # sanity check
 
 folder <- gsub('_posts/', '', filename) %>%
   gsub('\\.md', '', .) %>%
-  paste0('figure/', .)
+  paste0('figures/', .)
 
 if(dir.exists(folder)) {
   stop('Figures folder already exists!')
@@ -26,10 +26,16 @@ if(dir.exists(folder)) {
   dir.create(folder)
 }
 
-file.rename(paste0('figure/', figures),
+file.rename(paste0('figures/', figures),
             paste0(folder, '/', figures))
 
 #' change dirs in `md` file to `'../figures/post-specific-subfolder/image.png'`
 readLines(con = filename) %>%
-  gsub('src="figure/', paste0('src="', folder, '/'), .) %>%
+  gsub('src="figures/', paste0('src="', folder, '/'), .) %>%
+  # # change figure referencing
+  # gsub('<div class="figure">', '', .) %>%
+  # gsub('<img src="', '![](', .) %>%
+  # gsub(' alt="plot of chunk unnamed-chunk-4" width="\linewidth" />', '', .) %>%
+  # gsub('<p class="caption">plot of chunk unnamed-chunk-4</p>', '', .) %>%
+  # gsub('</div>', '', .) %>%
   writeLines(con = filename)
