@@ -124,7 +124,7 @@ m_3 <- gam(accidents ~ period, data = d, family = poisson(link = 'log'))
 coef(m_3)
 ```
 
-```
+``` text
 ## (Intercept) periodafter 
 ##   0.5108256  -1.3862944
 ```
@@ -219,7 +219,7 @@ expand_grid(Y = Y,
   labs(x = 'Y', y = 'Y*')
 ```
 
-```
+``` text
 ## Warning: There was 1 warning in `mutate()`.
 ## ℹ In argument: `Y_star = case_when(...)`.
 ## Caused by warning in `asin()`:
