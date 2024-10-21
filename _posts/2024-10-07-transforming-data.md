@@ -124,7 +124,7 @@ m_3 <- gam(accidents ~ period, data = d, family = poisson(link = 'log'))
 coef(m_3)
 ```
 
-``` text
+```
 ## (Intercept) periodafter 
 ##   0.5108256  -1.3862944
 ```
@@ -219,7 +219,7 @@ expand_grid(Y = Y,
   labs(x = 'Y', y = 'Y*')
 ```
 
-``` text
+```
 ## Warning: There was 1 warning in `mutate()`.
 ## ℹ In argument: `Y_star = case_when(...)`.
 ## Caused by warning in `asin()`:
@@ -230,7 +230,7 @@ expand_grid(Y = Y,
 
 ## Jensen's inequality
 
-[Jensen's inequality](https://en.wikipedia.org/wiki/Jensen%27s_inequality) demostrates that if we apply a nonlinear transformation to a random variable, we can't simply back-transform the mean. This is because, if $g()$ is a nonlinear transformation and $g^{-1}()$ is its inverse (e.g, $g() = \log()$ and $g^{-1}()=\exp()$): $$g\big[\mathbb E(Y)\big] \ne \mathbb E\big[g(Y)\big],$$ where $\mathbb E()$ indicates an expected value such that $\mathbb E(Y)=\mu$. This implies that $$\mathbb E(Y) = \mu \ne g^{-1}\bigg\{\mathbb E\big[g(Y)\big]\bigg\}$$.
+[Jensen's inequality](https://en.wikipedia.org/wiki/Jensen%27s_inequality) demonstrates that if we apply a nonlinear transformation to a random variable, we can't simply back-transform the mean. This is because, if $g()$ is a nonlinear transformation and $g^{-1}()$ is its inverse (e.g, $g() = \log()$ and $g^{-1}()=\exp()$): $$g\big[\mathbb E(Y)\big] \ne \mathbb E\big[g(Y)\big],$$ where $\mathbb E()$ indicates an expected value such that $\mathbb E(Y)=\mu$. This implies that $$\mathbb E(Y) = \mu \ne g^{-1}\bigg\{\mathbb E\big[g(Y)\big]\bigg\}$$.
 
 Here is a graphical example to help you visualize why. The green vertical line is the estimated mean (i.e., what we're usually interested in), the blue line is the estimated mean of the square-root transformed $Y$, and the blue line is the back-transformed estimated mean of the square-root transformed $Y$. The black line is the estimated bias.
 
