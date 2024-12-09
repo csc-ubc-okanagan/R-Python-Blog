@@ -1,8 +1,8 @@
 ---
-title: Getting started with GitHUb
+title: Getting started with GitHub
 date: '2024-09-16 12:00:00 -0800'
-categories: [R, R_IDE]
-tags: [R, rstudio] # tags always lowercase
+categories: [github, reproducibility]
+tags: [github] # tags always lowercase
 author: stefano
 output: 
   html_document:
