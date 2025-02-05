@@ -1,5 +1,5 @@
 ---
-title: 'Simple linear regression'
+title: 'Assumptions of simple linear regression'
 date: '2025-02-04 09:00:00 -0800'
 categories: [R, R_Modelling]
 tags: [r, modelling, linear_models, fitting_models_to_data] # tags always lowercase
