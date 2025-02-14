@@ -41,7 +41,7 @@ d0 <- tibble(x = runif(n = 100), # predictor of Y
 
 The figure shows the simulated data as points and the true relationship as the red line:
 
-![](/figures/2025-02-04-simple-linear-regression/figure-html/unnamed-chunk-4-1.png)<!-- -->
+![](/figures/2025-02-04-assumptions-of-simple-linear-regression/figure-html/unnamed-chunk-4-1.png)<!-- -->
 
 Single linear regression is based on five assumptions (although some people group some of them together):
 
@@ -49,25 +49,25 @@ Single linear regression is based on five assumptions (although some people grou
 
 *Note: In statistics, random variables are generally indicated using capital letters (e.g., $Y$), while values that are (assumed to be) known and fixed are indicated with lowercase letters (e.g., $x$).*
 
-![](/figures/2025-02-04-simple-linear-regression/figure-html/unnamed-chunk-5-1.png)<!-- -->
+![](/figures/2025-02-04-assumptions-of-simple-linear-regression/figure-html/unnamed-chunk-5-1.png)<!-- -->
 
 2. **Linearity**: The true relationship between $x$ and the mean of $Y$, $\mathbb E(Y) = \mu,$ is linear.
 
-![](/figures/2025-02-04-simple-linear-regression/figure-html/unnamed-chunk-6-1.png)<!-- -->
+![](/figures/2025-02-04-assumptions-of-simple-linear-regression/figure-html/unnamed-chunk-6-1.png)<!-- -->
 
 3. **Homoscedasticity**: The variance of the error term, $\epsilon$, is constant. This should be reflected in the estimated error, $e$, which we call the residuals (i.e., what is left over after explaining the change in $Y$ due to $x$).
 
-![](/figures/2025-02-04-simple-linear-regression/figure-html/unnamed-chunk-7-1.png)<!-- -->
+![](/figures/2025-02-04-assumptions-of-simple-linear-regression/figure-html/unnamed-chunk-7-1.png)<!-- -->
 
 4. **Independence**: Errors are independent of each other. This means that no two values $e_i$ and $e_j$ should depend on one another (for $i \ne j$). For example, in the plot below, there should be no trends in the residuals over the observation order; the line should move up and down like random noise. If there are trends, you should try understanding why and account for this in the model (e.g., acconting for differences between groups; explained in a later post). In the example below, the error I generated is random, so there should be no trends **on average**, but our eyes are often good at finding patterns that occur by change (see observations 1 to 12).
 
-![](/figures/2025-02-04-simple-linear-regression/figure-html/unnamed-chunk-8-1.png)<!-- -->
+![](/figures/2025-02-04-assumptions-of-simple-linear-regression/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
 5. **Normality of the errors**: The error follows a Gaussian (i.e., normal) distribution with mean 0 and variance $\sigma^2$, i.e., $\epsilon \sim N(0, \sigma^2)$. If the assumption is true, the residuals should (generally) follow an approximately Gaussian distribution. We can check this assumption with a histogram and a quantile-quantile plot (also referred to as a Q-Q plot). Histograms should show a relatively bell-shaped distribution, and points in a Q-Q plot should fall close to the reference line, with more points near zero and less far from zero. Histograms are helpful for visualizing the overall relationship, while Q-Q plots are helpful for visualizing the thickness of the tails of the distribution. In the example below, 
 
 *Note: Your sample of residuals may not quite have a Gaussian distribution even if when the true error is actually Gaussian.*
 
-![](/figures/2025-02-04-simple-linear-regression/figure-html/unnamed-chunk-9-1.png)<!-- -->![](/figures/2025-02-04-simple-linear-regression/figure-html/unnamed-chunk-9-2.png)<!-- -->
+![](/figures/2025-02-04-assumptions-of-simple-linear-regression/figure-html/unnamed-chunk-9-1.png)<!-- -->![](/figures/2025-02-04-assumptions-of-simple-linear-regression/figure-html/unnamed-chunk-9-2.png)<!-- -->
 
 You may see assumptions 4 and 5 grouped together as $\epsilon \overset{\text{iid}} \sim N(0,\sigma^2)$, which means that the errors are independent and identically distributed (iid) following a Gaussian distribution with mean 0 and variance $\sigma^2$.
 
