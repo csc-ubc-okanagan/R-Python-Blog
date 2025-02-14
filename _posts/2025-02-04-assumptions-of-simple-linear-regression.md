@@ -71,4 +71,4 @@ Single linear regression is based on five assumptions (although some people grou
 
 You may see assumptions 4 and 5 grouped together as $\epsilon \overset{\text{iid}} \sim N(0,\sigma^2)$, which means that the errors are independent and identically distributed (iid) following a Gaussian distribution with mean 0 and variance $\sigma^2$.
 
-If you're interested on seeing some examples on checking assumptions using models fit to real data, see [this post](missing).
+If you're interested on seeing some examples on checking assumptions using models fit to real data, see [this post]().
